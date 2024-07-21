@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:maqal/theme/light_theme.dart';
+import 'package:maqal/views/news_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Maqal',
       theme: lightTheme,
-      home: const Scaffold(),
+      home: const NewsView(),
     );
   }
 }
