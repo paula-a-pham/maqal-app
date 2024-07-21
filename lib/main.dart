@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:maqal/theme/light_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,10 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Maqal',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        useMaterial3: true,
-      ),
+      theme: lightTheme,
       home: const Scaffold(),
     );
   }
