@@ -5,12 +5,12 @@ sealed class NewsState {}
 
 final class NewsInitial extends NewsState {}
 
-final class NewsLoading extends NewsState {}
+final class TopNewsLoading extends NewsState {}
 
-final class NewsSuccess extends NewsState {}
+final class TopNewsSuccess extends NewsState {}
 
-final class NewsFail extends NewsState {
+final class TopNewsFail extends NewsState {
   final String error;
 
-  NewsFail({required this.error});
+  TopNewsFail({required this.error});
 }
