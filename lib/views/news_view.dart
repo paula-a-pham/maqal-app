@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:maqal/widgets/news_view_body.dart';
 
 class NewsView extends StatelessWidget {
   const NewsView({super.key});
@@ -11,6 +12,7 @@ class NewsView extends StatelessWidget {
           'مقال',
         ),
       ),
+      body: const NewsViewBody(),
     );
   }
 }
