@@ -16,7 +16,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Maqal',
       theme: lightTheme,
-      home: const NewsView(),
+      home: const Directionality(
+        textDirection: TextDirection.rtl,
+        child: NewsView(),
+      ),
     );
   }
 }
