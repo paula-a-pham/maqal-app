@@ -18,15 +18,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Maqal',
-      theme: lightTheme,
-      home: Directionality(
-        textDirection: TextDirection.rtl,
-        child: BlocProvider(
-          create: (context) => NewsCubit()..getTopNews(),
-          child: const NewsView(),
+    return BlocProvider(
+      create: (context) => NewsCubit()..getTopNews(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Maqal',
+        theme: lightTheme,
+        home: const Directionality(
+          textDirection: TextDirection.rtl,
+          child: NewsView(),
         ),
       ),
     );

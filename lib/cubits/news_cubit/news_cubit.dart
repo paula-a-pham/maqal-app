@@ -13,6 +13,8 @@ class NewsCubit extends Cubit<NewsState> {
       BlocProvider.of(context);
 
   List topNews = [];
+  List searchNews = [];
+
   void getTopNews() {
     emit(TopNewsLoading());
     DioHelper.getNews(
@@ -31,6 +33,30 @@ class NewsCubit extends Cubit<NewsState> {
       if (kDebugMode) {
         print(error.toString());
         emit(TopNewsFail(error: error.toString()));
+      }
+    });
+  }
+
+  void getSearchNews({required String text}) {
+    emit(SearchNewsLoading());
+    DioHelper.getNews(
+      endPoint: search,
+      queryParameters: {
+        'country': 'eg',
+        'lang': 'ar',
+        'sortby': 'publishedAt',
+        'q': text,
+        'apikey': '43aa7214fdc3e25ee5e2a3e874cd6cc8',
+      },
+    ).then(
+      (value) {
+        searchNews = value.data['articles'];
+        emit(SearchNewsSuccess());
+      },
+    ).catchError((error) {
+      if (kDebugMode) {
+        print(error.toString());
+        emit(SearchNewsFail(error: error.toString()));
       }
     });
   }

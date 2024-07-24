@@ -14,3 +14,13 @@ final class TopNewsFail extends NewsState {
 
   TopNewsFail({required this.error});
 }
+
+final class SearchNewsLoading extends NewsState {}
+
+final class SearchNewsSuccess extends NewsState {}
+
+final class SearchNewsFail extends NewsState {
+  final String error;
+
+  SearchNewsFail({required this.error});
+}
