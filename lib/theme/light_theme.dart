@@ -3,7 +3,9 @@ import 'package:flutter/services.dart';
 import 'package:maqal/constants/colors.dart';
 
 ThemeData lightTheme = ThemeData(
+  colorSchemeSeed: kPrimaryColor,
   appBarTheme: const AppBarTheme(
+    titleSpacing: 15.0,
     backgroundColor: Colors.transparent,
     elevation: 0.0,
     foregroundColor: Colors.black,
@@ -19,6 +21,5 @@ ThemeData lightTheme = ThemeData(
     ),
   ),
   fontFamily: 'Tajawal',
-  primarySwatch: kPrimaryColor,
   useMaterial3: true,
 );

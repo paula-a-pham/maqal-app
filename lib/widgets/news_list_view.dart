@@ -18,7 +18,7 @@ class NewsListView extends StatelessWidget {
       ),
       separatorBuilder: (context, index) => Divider(
         color: Colors.grey.withOpacity(0.15),
-        height: 20,
+        height: 25,
       ),
       itemCount: NewsCubit.getNewsCubit(context).topNews.length,
     );

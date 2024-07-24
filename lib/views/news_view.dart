@@ -9,7 +9,7 @@ class NewsView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'مقال',
+          'آخر الأخبار',
         ),
       ),
       body: const NewsViewBody(),

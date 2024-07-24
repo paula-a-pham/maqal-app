@@ -17,7 +17,7 @@ class NewsViewBody extends StatelessWidget {
                 child: CircularProgressIndicator(),
               )
             : const Padding(
-                padding: EdgeInsets.all(15),
+                padding: EdgeInsets.only(bottom: 15.0,left: 15.0,right: 15.0),
                 child: NewsListView(),
               );
       },
