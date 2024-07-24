@@ -15,7 +15,7 @@ class CustomTextField extends StatelessWidget {
           borderRadius: BorderRadius.circular(15.0),
         ),
         hintText: 'البحث',
-        prefixIcon: const Icon(Icons.search),
+        suffixIcon: const Icon(Icons.search),
         hintTextDirection: TextDirection.rtl,
       ),
       keyboardType: TextInputType.text,
